@@ -1,0 +1,6 @@
+RewriteEngine On 
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC] 
+RewriteRule ^ https://boschcarservicealbatros.com%{REQUEST_URI} [R=301,L,NE] 
+DirectoryIndex index.html
+
